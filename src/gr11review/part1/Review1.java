@@ -21,14 +21,14 @@ public class Review1{
 
 
         //Ask about the month and day, then records the answer
-        System.out.println("Enter the month number:");
+        System.out.print("Enter the month number: ");
         numMonth = Integer.parseInt(key.readLine());
 
-        System.out.println("Enter the day number:");
+        System.out.print("Enter the day number: ");
         numDay = Integer.parseInt(key.readLine());
 
         //Assuming what is mentioned above, calculates the amount of days in the year
-        //The if system changes it's calculation based on whether it is January or February
+        //The if system changes it's calculation based on whether how many 30 day months have passed
         if (numMonth < 2){
 
             numTotalDays = numDay;
@@ -42,13 +42,42 @@ public class Review1{
 
                 System.out.println(numTotalDays);
 
-        }
-                 else{
+           }
+                else if(2 < numMonth && numMonth < 5){
 
                     numTotalDays = (numMonth - 2) * 31 + numDay + 28;
 
-                    System.out.println(numTotalDays);
-                 }
+                            System.out.println(numTotalDays);
+
+
+                }
+                    else if (4 < numMonth  && numMonth < 7){
+
+                        numTotalDays = (numMonth - 2) * 31 + numDay + 28 - 1;
+
+                        System.out.println(numTotalDays);
+                    }
+                        else if (6 < numMonth && numMonth < 10){
+
+                            numTotalDays = (numMonth - 2) * 31 + numDay + 28 - 2;
+
+                            System.out.println(numTotalDays);
+
+                        }
+                            else if (9 < numMonth && numMonth < 12){
+
+                                numTotalDays = (numMonth - 2) * 31 + numDay + 28 - 3;
+
+                                System.out.println(numTotalDays);
+
+                            }
+                                else{
+
+                                    numTotalDays = (numMonth - 2) * 31 + numDay + 28 - 4;
+
+                                    System.out.println(numTotalDays);
+
+                                }
 
     }
 }
