@@ -7,6 +7,7 @@ import java.io.*;
  * Depending on the numbers inputed
  * Assumes that it is not a leap year
  * And that all months other than February are 31 days
+ * @author: A. Wong
  */
 
 public class Review1{
@@ -18,14 +19,18 @@ public class Review1{
 
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
 
+
+        //Ask about the month and day, then records the answer
         System.out.println("Enter the month number:");
         numMonth = Integer.parseInt(key.readLine());
 
         System.out.println("Enter the day number:");
         numDay = Integer.parseInt(key.readLine());
 
+        //Assuming what is mentioned above, calculates the amount of days in the year
         numTotalDays = (numMonth - 2) * 31 + numDay + 28;
 
+        //Prints the total amount of days
         System.out.println(numTotalDays);
 
 
