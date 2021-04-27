@@ -28,6 +28,7 @@ public class Review1{
         numDay = Integer.parseInt(key.readLine());
 
         //Assuming what is mentioned above, calculates the amount of days in the year
+        //The if system changes it's calculation based on whether it is January or February
         if (numMonth < 2){
 
             numTotalDays = numDay;
