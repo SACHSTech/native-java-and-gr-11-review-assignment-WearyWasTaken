@@ -21,11 +21,13 @@ public class Review7{
 
         for (int num1 = 0; num1 < arrSentence.length; num1++){
             switch(arrSentence[num1]){
-                case ' ': numSpaces++;
-                break;
+                case ' ': 
+                    numSpaces++;
+                    break;
 
-                case 'a': numA++;
-                break;
+                case 'a': 
+                    numA++;
+                    break;
 
             }
 
