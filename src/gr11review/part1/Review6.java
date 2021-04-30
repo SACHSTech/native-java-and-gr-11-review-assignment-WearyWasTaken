@@ -1,6 +1,7 @@
 package gr11review.part1;
 
 import java.io.*;
+import java.text.NumberFormat;
 import java.text.*;
 
 /**
@@ -19,7 +20,7 @@ public class Review6{
         double numTotal;
         int numCounter = 1;
 
-        NumberFormat numberFormat = new DecimalFormat("##.##");
+        NumberFormat numberFormat = new DecimalFormat("###,###0.00");
 
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
 
@@ -28,7 +29,7 @@ public class Review6{
         //If it is, it finishes the calculations
         while (numPrice != 0){
 
-                System.out.println("Enter the price for item " + numCounter);
+                System.out.print("Enter the price for an item: ");
                 numPrice = Double.parseDouble(key.readLine());
 
                 numSubTotal += numPrice;
@@ -45,9 +46,9 @@ public class Review6{
         numTotal = numSubTotal + numTax;
 
         //Prints the result
-        System.out.println("Subtotal: $" + numSubTotal);
-        System.out.println("Tax: $" + numTax);
-        System.out.println("Total: $" + numTotal);
+        System.out.println("Subtotal: $" + numberFormat.format(numSubTotal));
+        System.out.println("Tax: $" + numberFormat.format(numTax));
+        System.out.println("Total: $" + numberFormat.format(numTotal));
 
 
     }
