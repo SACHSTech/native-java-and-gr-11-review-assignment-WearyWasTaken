@@ -22,7 +22,7 @@ public class Review7{
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
 
         //Takes input for the sentence
-        System.out.println("Input a sentence: ");
+        //System.out.println("Input a sentence: ");
         theSentence = key.readLine();
 
         char[] arrSentence = theSentence.toCharArray();
@@ -50,13 +50,13 @@ public class Review7{
         }
 
         //Counts the number of characters in the string
-        numCharacter = arrSentence.length - numSpaces;
+        numCharacter = arrSentence.length;
 
         //Prints the results
         System.out.println("There are " + numCharacter + " characters in the sentence.");
         System.out.println("There are " + numSpaces + " spaces in the sentence.");
         System.out.println("There are " + numA + " letter a in the sentence.");
-        System.out.println("Taking the odd numbered characters in the sentence produces the following string '" + oddCharacters + "'");
+        System.out.println(oddCharacters);
 
     }
 
