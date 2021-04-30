@@ -17,15 +17,12 @@ public class Review4{
         double numSubTotal = 0;
         double numTax;
         double numTotal;
-        NumberFormat numberFormat = new DecimalFormat("##.##");
-
+        NumberFormat numberFormat = new DecimalFormat("###,###,##0.00");
 
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
 
-
-        
         //Ask for the first input
-        System.out.println("How many items do you want to buy? ");
+        System.out.print("How many items do you want to buy? ");
         numInput = Integer.parseInt(key.readLine());
 
         //Keeps asking for input based on the inputed number earlier
@@ -33,7 +30,7 @@ public class Review4{
 
             double numPrice;
 
-            System.out.println("Enter the price for item " + num1);
+            System.out.print("Enter the price for item " + num1 + ": ");
             numPrice = Double.parseDouble(key.readLine());
 
             numSubTotal += numPrice;
@@ -44,14 +41,14 @@ public class Review4{
         numTax = numSubTotal * 0.13;
       
         //Fixes taxes format
-        String format = numberFormat.format(numTax);
+        numberFormat.format(numTax);
       
         numTotal = numSubTotal + numTax;
 
         //Prints the result
-        System.out.println("Subtotal: $" + numSubTotal);
-        System.out.println("Tax: $" + numTax);
-        System.out.println("Total: $" + numTotal);
+        System.out.println("Subtotal: $" + numberFormat.format(numSubTotal));
+        System.out.println("Tax: $" + numberFormat.format(numTax));
+        System.out.println("Total: $" + numberFormat.format(numTotal));
 
 
     }
