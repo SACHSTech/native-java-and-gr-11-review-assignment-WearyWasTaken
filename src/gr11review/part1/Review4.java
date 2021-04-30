@@ -1,7 +1,8 @@
 package gr11review.part1;
 
 import java.io.*;
-import java.text.DecimalFormat.*;
+import java.text.NumberFormat;
+import java.text.*;
 
 public class Review4{
     public static void main(String[] args) throws IOException{
@@ -10,7 +11,7 @@ public class Review4{
         double numSubTotal = 0;
         double numTax;
         double numTotal;
-        DecimalFormat decimalFormat = new DecimalFormat("##.##");
+        NumberFormat numberFormat = new DecimalFormat("##.##");
 
 
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
@@ -34,7 +35,7 @@ public class Review4{
 
         numTax = numSubTotal * 0.13 * 100;
       
-        String format = decimalFormat.format(numTax);
+        String format = numberFormat.format(numTax);
       
         numTotal = numSubTotal + numTax;
 
