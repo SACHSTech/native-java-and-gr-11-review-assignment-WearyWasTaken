@@ -20,13 +20,13 @@ import java.io.*;
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
 
         //Printes out the questions and takes inputs
-        System.out.println("Enter the yearly invested amount: ");
+        System.out.print("Enter the yearly invested amount: ");
         numInvest = Double.parseDouble(key.readLine());
 
-        System.out.println("Enter the compound interest rate: ");
+        System.out.print("Enter the compound interest rate: ");
         numRate = Double.parseDouble(key.readLine());
 
-        System.out.println("Enter the target amount: ");
+        System.out.print("Enter the target amount: ");
         numTarget = Double.parseDouble(key.readLine());
 
         //Calculates the amount gained per year and how many years required
