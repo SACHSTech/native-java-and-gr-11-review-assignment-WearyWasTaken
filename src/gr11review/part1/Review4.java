@@ -4,6 +4,12 @@ import java.io.*;
 import java.text.NumberFormat;
 import java.text.*;
 
+/**
+ * Asks for an input to know how many inputs to count
+ * Takes inputed prices to calculate tax and total
+ * @author A. Wong
+ */
+
 public class Review4{
     public static void main(String[] args) throws IOException{
 
@@ -18,10 +24,11 @@ public class Review4{
 
 
         
-        
+        //Ask for the first input
         System.out.println("How many items do you want to buy? ");
         numInput = Integer.parseInt(key.readLine());
 
+        //Keeps asking for input based on the inputed number earlier
         for (int num1 = 1; num1 <= numInput; num1++){
 
             double numPrice;
@@ -33,13 +40,15 @@ public class Review4{
 
         }
 
-        numTax = numSubTotal * 0.13 * 100;
+        //Calculating for tax
+        numTax = numSubTotal * 0.13;
       
+        //Fixes taxes format
         String format = numberFormat.format(numTax);
       
         numTotal = numSubTotal + numTax;
 
-
+        //Prints the result
         System.out.println("Subtotal: $" + numSubTotal);
         System.out.println("Tax: $" + numTax);
         System.out.println("Total: $" + numTotal);
