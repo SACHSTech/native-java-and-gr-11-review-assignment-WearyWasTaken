@@ -22,7 +22,6 @@ public class Review7{
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
 
         //Takes input for the sentence
-        //System.out.println("Input a sentence: ");
         theSentence = key.readLine();
 
         char[] arrSentence = theSentence.toCharArray();
