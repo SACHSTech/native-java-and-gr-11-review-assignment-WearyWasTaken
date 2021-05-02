@@ -25,40 +25,34 @@ import java.io.*;
         numInput = Integer.parseInt(key.readLine());
 
         //Prints a joke based on the inputed number
-        //If the number is not listed, it responds with "Invalid menu input"
-        if (numInput == 0){
-
-            System.out.println("Why do bees have sticky hair?");
-            System.out.println("They always use honeycombs.");
-
-        }
-        else if (numInput == 1){
-
+        //If the number inputed is not listed, it responds with "Invalid menu input"
+        switch(numInput){
+            case '0':
+                System.out.println("Why do bees have sticky hair?");
+                System.out.println("They always use honeycombs.");
+                break;
+            
+            case '1':
                 System.out.println("A giraffe can grow up to 18 feet");
                 System.out.println("But they usually only have 4");
+                break;
 
-
-            }
-            else if (numInput == 2){
-
+            case '2':
                 System.out.println("What is DNA's favourite pice of clothing?");
                 System.out.println("Jeans");
+                break;
 
-            }
-                else if (numInput == 3){
+            case '3':
+                System.out.println("Why did the teacher go to the beach?");
+                System.out.println("To test the water");
+                break;
 
-                    System.out.println("Why did the teacher go to the beach?");
-                    System.out.println("To test the water");
+            default:
+                System.out.println("Invalid menu option");
+                break;
 
-                }
-                else{
-
-                    System.out.println("Invalid menu option");
-
-                }
-
-
-
+        }
+    
     }
 
  }
